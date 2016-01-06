@@ -15,7 +15,8 @@ class ListNode{
 
     public ListNode(int value) {
         this.value = value;
+        this.next = null;
     }
 
-
+    
 }
