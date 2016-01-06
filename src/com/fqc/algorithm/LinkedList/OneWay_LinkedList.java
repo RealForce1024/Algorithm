@@ -6,3 +6,16 @@ package com.fqc.algorithm.LinkedList;
 public class OneWay_LinkedList {
     
 }
+
+
+class ListNode{
+
+    ListNode next;
+    int value;
+
+    public ListNode(int value) {
+        this.value = value;
+    }
+
+
+}
