@@ -12,8 +12,22 @@ public class SequenceList implements List{
     int maxSize;
     //当前长度
     int size;
-    //对象数组(保存当前对象，)
+    //对象数组(保存当前对象)
     Object[] listArray;
+
+    public SequenceList() {
+        init(defaultSize);
+    }
+
+    public void init(int size){
+        maxSize = size;
+        size = 0;
+        listArray = new Object[maxSize];
+    }
+
+    public SequenceList(int size) {
+        init(size);
+    }
 
 
     @Override
