@@ -17,9 +17,9 @@ public class SequenceListTest {
     @Before
     public void setUp() throws Exception {
         sequenceList = new SequenceList(20);
-        sequenceList.insert(sequenceList.size,new Student("zhangsan",20));
-        sequenceList.insert(sequenceList.size,new Student("zhangsan",21));
-        sequenceList.insert(sequenceList.size,new Student("zhangsan",23));
+//        sequenceList.insert(sequenceList.size,new Student("zhangsan",20));
+//        sequenceList.insert(sequenceList.size,new Student("zhangsan",21));
+//        sequenceList.insert(sequenceList.size,new Student("zhangsan",23));
     }
 
     @After
@@ -47,9 +47,12 @@ public class SequenceListTest {
 
     @Test
     public void testInsert() throws Exception {
-        sequenceList.insert(sequenceList.size,new Student("zhangsan",20));
-        sequenceList.insert(sequenceList.size,new Student("zhangsan",20));
-        sequenceList.insert(sequenceList.size,new Student("zhangsan",20));
+        sequenceList.insert(0,new Student("zhangsan",2));
+        sequenceList.insert(1,new Student("zhangsan",1));
+        sequenceList.insert(2,new Student("zhangsan",0));
+        for (int i = 0; i < sequenceList.size; i++) {
+            System.out.println(sequenceList.listArray[i]);
+        }
     }
 
     @Test
