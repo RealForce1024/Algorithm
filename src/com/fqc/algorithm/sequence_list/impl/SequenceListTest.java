@@ -47,9 +47,13 @@ public class SequenceListTest {
 
     @Test
     public void testInsert() throws Exception {
-        sequenceList.insert(0,new Student("zhangsan",2));
-        sequenceList.insert(1,new Student("zhangsan",1));
-        sequenceList.insert(2,new Student("zhangsan",0));
+//        sequenceList.insert(0,new Student("zhangsan",2));
+//        sequenceList.insert(1,new Student("zhangsan",1));
+//        sequenceList.insert(2,new Student("zhangsan",0));
+        sequenceList.insert(sequenceList.size,new Student("kobe",1));
+        sequenceList.insert(sequenceList.size,new Student("kobe",2));
+//        sequenceList.insert(0,new Student("kobe",1));
+//        sequenceList.insert(0,new Student("kobe",2));
         for (int i = 0; i < sequenceList.size; i++) {
             System.out.println(sequenceList.listArray[i]);
         }
