@@ -42,7 +42,16 @@ public class SequenceList implements List{
 
     @Override
     public void insert(int index, Object obj) throws Exception {
-
+	    if(size==maxsize){
+		    return new Exception("顺序表已满，无法插入")
+	    }
+	    if(index < 0 || index > size){
+		    return new Exception("插入位置异常")
+	    for(int j = size;j>index;j--){
+		    listArray[j]=listArray[j-1];
+	    }
+	    listArray[index] = obj;
+	    size++;
     }
 
     @Override
