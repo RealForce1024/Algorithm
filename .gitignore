@@ -13,6 +13,11 @@ hs_err_pid*
 Algorithm.iml
 .idea
 
+#eclipse
+.project
+.classpath
+.settings
+bin/
 
 
 
@@ -20,3 +25,4 @@ Algorithm.iml
 
 
 
+/bin/
