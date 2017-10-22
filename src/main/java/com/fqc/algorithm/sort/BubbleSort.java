@@ -1,5 +1,7 @@
 package com.fqc.algorithm.sort;
 
+import java.util.Arrays;
+
 /**
  * 冒泡排序（Bubble Sort）是一种简单的排序算法。它重复地走访过要排序的数列，一次比较两个元素，
  * 如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。
@@ -23,6 +25,7 @@ public class BubbleSort {
                     arr[j + 1] = temp;
                 }
             }
+            System.out.println("第" + (i + 1) + "次排序: " + Arrays.toString(arr));
         }
         return arr;
     }
