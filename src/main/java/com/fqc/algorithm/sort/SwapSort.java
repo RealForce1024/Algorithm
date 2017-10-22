@@ -13,7 +13,7 @@ import java.util.Arrays;
  */
 public class SwapSort {
 
-    public static int[] sort(int[] arr) {
+    public static void sort(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[i] > arr[j]) {
@@ -22,7 +22,6 @@ public class SwapSort {
             }
             System.out.println("第" + (i + 1) + "次排序: " + Arrays.toString(arr));
         }
-        return arr;
     }
 
 }
