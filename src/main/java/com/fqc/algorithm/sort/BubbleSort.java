@@ -1,5 +1,7 @@
 package com.fqc.algorithm.sort;
 
+import com.fqc.algorithm.util.SortUtils;
+
 import java.util.Arrays;
 
 /**
@@ -20,9 +22,7 @@ public class BubbleSort {
             // arr.length - 1 - i ->未完成排序的次数
             for (int j = 0; j < arr.length - 1 - i; j++) {
                 if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+                    SortUtils.swap(arr, j, j + 1);
                 }
             }
             System.out.println("第" + (i + 1) + "次排序: " + Arrays.toString(arr));

@@ -1,5 +1,7 @@
 package com.fqc.algorithm.sort;
 
+import com.fqc.algorithm.util.SortUtils;
+
 import java.util.Arrays;
 
 /**
@@ -15,9 +17,7 @@ public class SwapSort {
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[i] > arr[j]) {
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
+                    SortUtils.swap(arr,i,j);
                 }
             }
             System.out.println("第" + (i + 1) + "次排序: " + Arrays.toString(arr));
