@@ -17,6 +17,7 @@ public class BubbleSort {
      * 让较大的数往下沉，较小的往上冒。即：每当两相邻的数比较后发现它们的排序与排序要求相反时，就将它们互换。
      */
     public static void sort(int[] arr) {
+        int count = 0;
         // arr.length-1 ->要排序的次数
         for (int i = 0; i < arr.length - 1; i++) {
             // arr.length - 1 - i ->未完成排序的次数
@@ -25,7 +26,26 @@ public class BubbleSort {
                     SortUtils.swap(arr, j, j + 1);
                 }
             }
-            System.out.println("第" + (i + 1) + "次排序: " + Arrays.toString(arr));
+            System.out.println("第" + (++count) + "次排序: " + Arrays.toString(arr));
+        }
+    }
+
+    public static void sortWithFlag(int[] arr) {
+        int len = arr.length;
+        boolean flag = true;
+        int count = 0;
+        while (flag) {
+            // for(int i = 0; i<len, i++){
+            for (int i = 1; i < len - 1; i++) {
+                flag = false;
+                // if (arr[i] > arr[i + 1]) {
+                if (arr[i - 1] > arr[i]) {
+                    SortUtils.swap(arr, i - 1, i);
+                    flag = true;
+                }
+
+            }
+            System.out.println("第" + (++count) + "次排序: " + Arrays.toString(arr));
         }
     }
 }
